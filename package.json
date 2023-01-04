@@ -1,5 +1,5 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
+  "name": "rock-scissors-paper",
   "description": "This is a boilerplate build with React 18, TypeScript, Jest, Testing Library, TailwindCSS 3, Eslint and Prettier.",
   "version": "0.1.0",
   "private": true,
@@ -22,8 +22,18 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.4.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@hookform/resolvers": "^2.9.10",
+    "firebase": "^9.15.0",
+    "framer-motion": "^8.1.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hook-form": "^7.41.3",
+    "react-router-dom": "^6.6.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
