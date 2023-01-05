@@ -1,6 +1,6 @@
 import { Link } from '@chakra-ui/react'
-import { Layout } from 'shared/components/layout'
 import { Link as RouterLink } from 'react-router-dom'
+import { Layout } from 'shared/components/layout'
 
 export const NotFoundErrorPage = () => {
   return (
