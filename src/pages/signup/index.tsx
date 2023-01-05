@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 import { Link } from '@chakra-ui/react'
-import { Link as RouterLink, useNavigate } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 
 import { Layout } from 'shared/components/layout'
 
@@ -35,7 +35,6 @@ const schema = yup
 export const SignupPage = () => {
   const [signUpWithEmailAndPassword, user, loading, signUpError] =
     useCreateUserWithEmailAndPassword(firebaseAuth)
-  const navigate = useNavigate()
 
   const {
     register,

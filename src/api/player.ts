@@ -1,6 +1,6 @@
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from 'app/App'
-import { UserCredential } from 'firebase/auth'
+import { User, UserCredential } from 'firebase/auth'
 
 export const createPlayer = ({
   nickname,
@@ -13,4 +13,10 @@ export const createPlayer = ({
     nickname,
     userId: user.user.uid
   })
+}
+
+export const getPlayer = (user: User) => {
+  return getDocs(
+    query(collection(firestore, 'players'), where('userId', '==', user.uid))
+  )
 }

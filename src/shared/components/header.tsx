@@ -1,11 +1,12 @@
 import { Link } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Button } from '@chakra-ui/react'
-import { firebaseAuth } from 'app/App'
+import { firebaseAuth, PlayerContext } from 'app/App'
 import { signOut } from 'firebase/auth'
+import { useContext } from 'react'
 
 export const Header = () => {
-  const nickname = 'TODO:: NICK'
+  const player = useContext(PlayerContext)
 
   return (
     <header className="text-gray-600">
@@ -18,7 +19,7 @@ export const Header = () => {
           Rock Scissors Paper
         </Link>
         <div className="flex items-center">
-          <div className="mr-4">Hello {nickname}</div>
+          <div className="mr-4">Hello {player ? player.nickname : ''}</div>
           <Button className="self-end" onClick={() => signOut(firebaseAuth)}>
             Logout
           </Button>

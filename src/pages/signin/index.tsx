@@ -13,7 +13,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 
-
 import { Layout } from 'shared/components/layout'
 import { firebaseAuth } from 'app/App'
 
@@ -77,11 +76,11 @@ export const SigninPage = () => {
         <Button type="submit" disabled={!isValid || loading}>
           Sign in
         </Button>
-        <Link as={RouterLink} to="/signup">Go to sign up form </Link>
+        <Link as={RouterLink} to="/signup">
+          Go to sign up form{' '}
+        </Link>
         <FormControl isInvalid={Boolean(signInError)}>
-          <FormErrorMessage>
-            {signInError?.message}
-          </FormErrorMessage>
+          <FormErrorMessage>{signInError?.message}</FormErrorMessage>
         </FormControl>
       </VStack>
     </Layout>
