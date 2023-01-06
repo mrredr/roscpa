@@ -1,7 +1,7 @@
 # Rock Scissors Paper game
 
 This is rock scissors papper game project for test purposes
-You can check deploed version by link [play]()
+You can check deploed version by link [https://roscpa-f5261.web.app/](https://roscpa-f5261.web.app/)
 
 ## What is inside?
 
