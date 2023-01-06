@@ -33,7 +33,7 @@ export const GameItem = React.memo(function GameItem({
           {game.player1?.nickname} VS {game.player2?.nickname}
         </Heading>
         {game.status === GAME_STATUS.START && (
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row items-center justify-between">
             Waiting for opponent&nbsp;
             {playerNumber === 0 && (
               <Button
@@ -50,16 +50,16 @@ export const GameItem = React.memo(function GameItem({
           </div>
         )}
         {game.status === GAME_STATUS.GAME && (
-          <div className="flex flex-row justify-between">
-            {isMyNextMove ? 'Your move' : "Opponent's move"}
+          <div className="flex flex-row items-center justify-between">
+            {isMyNextMove ? 'Your move ' : "Opponent's move "}
             <Button onClick={() => navigate('/games/' + gameData.id)}>
               Open
             </Button>
           </div>
         )}
         {game.status === GAME_STATUS.END && (
-          <div className="flex flex-row justify-between">
-            Game finished{' '}
+          <div className="flex flex-row items-center justify-between">
+            Game finished&nbsp;
             <Button onClick={() => navigate('/games/' + gameData.id)}>
               Open
             </Button>
