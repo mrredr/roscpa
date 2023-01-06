@@ -19,7 +19,7 @@ This project uses many tools like:
 - [react-hook-form](https://react-hook-form.com)
 - [Firebase](https://firebase.google.com)
 
-- also Husky, conventional commits, feature sliced design
+- also Husky, conventional commits, feature sliced design architecture
 
 ## Getting Started
 
