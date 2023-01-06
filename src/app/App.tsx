@@ -11,25 +11,29 @@ import { createContext, useEffect, useState } from 'react'
 import { Loader } from 'shared/components/loader'
 import { getAuth, User } from 'firebase/auth'
 import { GeneralErrorPage } from 'pages/error'
-import { DocumentData, getFirestore } from 'firebase/firestore'
-import { getPlayer } from 'api/player'
+import { getFirestore } from 'firebase/firestore'
+import { getPlayer } from 'entities/player/api'
 
 export const firebaseApp = initializeApp(firebaseConfig)
 export const firebaseAuth = getAuth(firebaseApp)
 export const firestore = getFirestore(firebaseApp)
 
 export const UserContext = createContext<User | null | undefined>(undefined)
-
-export const PlayerContext = createContext<DocumentData | null>(null)
+export type Player = {
+  nickname: string
+  userId: string
+  id: string
+}
+export const PlayerContext = createContext<Player | null>(null)
 
 function App() {
   const [user, loadingUser, error] = useIdToken(firebaseAuth)
-  const [player, setPlayer] = useState<DocumentData | null>(null)
+  const [player, setPlayer] = useState<Player | null>(null)
 
   useEffect(() => {
     if (user) {
       getPlayer(user).then((data) => {
-        setPlayer({ ...data.docs[0].data(), id: data.docs[0].id })
+        setPlayer({ ...data.docs[0].data(), id: data.docs[0].id } as Player)
       })
     }
   }, [user])

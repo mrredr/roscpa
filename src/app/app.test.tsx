@@ -30,7 +30,7 @@ jest.mock('react-firebase-hooks/auth', () => ({
     null
   ]
 }))
-jest.mock('api/player', () => ({
+jest.mock('entities/player/api', () => ({
   getPlayer: () => ({
     then: jest.fn().mockReturnValue({
       docs: [{ data: () => ({ nickname: 'me' }), id: '2' }]

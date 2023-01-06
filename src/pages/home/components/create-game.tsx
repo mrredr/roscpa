@@ -14,7 +14,7 @@ import {
   Portal,
   Stack
 } from '@chakra-ui/react'
-import { createGame } from 'api/game'
+import { createGame } from 'entities/game/api'
 import { PlayerContext } from 'app/App'
 import { useContext, useState } from 'react'
 

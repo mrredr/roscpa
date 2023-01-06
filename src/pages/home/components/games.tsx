@@ -1,5 +1,5 @@
 import { Heading, Stack } from '@chakra-ui/react'
-import { firestore, PlayerContext } from 'app/App'
+import { firestore, Player, PlayerContext } from 'app/App'
 import {
   collection,
   doc,
@@ -12,10 +12,10 @@ import { useContext, useEffect, useState } from 'react'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { Loader } from 'shared/components/loader'
 import { CreateGame } from './create-game'
-import { GameItem } from './game'
+import { GameItem } from './game-item'
 
 export const NotMyGamesList = ({ title }: { title: string }) => {
-  const player = useContext(PlayerContext)
+  const player: Player = useContext(PlayerContext) as Player
   const playerDocRef = doc(firestore, 'players', player?.id)
   const [values, loading, error] = useCollection(
     query(
@@ -55,7 +55,7 @@ export const MyGamesList = ({
   status: string
   condition: WhereFilterOp
 }) => {
-  const player = useContext(PlayerContext)
+  const player: Player = useContext(PlayerContext) as Player
   const playerDocRef = doc(firestore, 'players', player?.id)
   const [valuesDocs, setValuesDocs] = useState<DocumentData[]>([])
   const [values1, loading1, error1] = useCollection(

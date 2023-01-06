@@ -16,7 +16,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { firebaseAuth } from 'app/App'
-import { createPlayer } from 'api/player'
+import { createPlayer } from 'entities/player/api'
 
 type FormInputs = {
   email: string
