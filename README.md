@@ -1,6 +1,7 @@
-# React Tailwindcss Boilerplate build with Vite
+# Rock Scissors Paper game
 
-This is a [ReactJS](https://reactjs.org) + [Vite](https://vitejs.dev) boilerplate to be used with [Tailwindcss](https://tailwindcss.com).
+This is rock scissors papper game project for test purposes
+You can check deploed version by link [play]()
 
 ## What is inside?
 
@@ -14,22 +15,15 @@ This project uses many tools like:
 - [Tailwindcss](https://tailwindcss.com)
 - [Eslint](https://eslint.org)
 - [Prettier](https://prettier.io)
+- [Chakra UI](https://chakra-ui.com)
+- [react-hook-form](https://react-hook-form.com)
+- [Firebase](https://firebase.google.com)
+
+- also Husky, conventional commits, feature sliced design
 
 ## Getting Started
 
 ### Install
-
-Create the project.
-
-```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
-Access the project directory.
-
-```bash
-cd my-app
-```
 
 Install dependencies.
 

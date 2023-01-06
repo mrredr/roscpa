@@ -1,5 +1,5 @@
 import { Player } from 'app/App'
-import { Game } from './model'
+import { Game } from './type'
 
 export const getPlayerNumber = (game: Game | null, player: Player | null) => {
   if (!game || !player) return 0
